@@ -8,9 +8,9 @@ export function createLanguageSwitcher() {
     const switcher = document.createElement('div');
     switcher.className = 'language-switcher';
     switcher.innerHTML = `
-        <button class="language-btn" id="languageBtn" aria-label="切换语言">
+        <button class="language-btn" id="languageBtn" aria-label="Cambiar idioma">
             <i class="fas fa-globe"></i>
-            <span class="current-lang">${currentLang === 'zh-CN' ? '中文' : 'EN'}</span>
+            <span class="current-lang">${currentLang === 'zh-CN' ? '中文' : currentLang === 'es-ES' ? 'ES' : 'EN'}</span>
         </button>
         <div class="language-dropdown" id="languageDropdown">
             <button class="language-option ${currentLang === 'zh-CN' ? 'active' : ''}" data-lang="zh-CN">
@@ -20,6 +20,10 @@ export function createLanguageSwitcher() {
             <button class="language-option ${currentLang === 'en-US' ? 'active' : ''}" data-lang="en-US">
                 <i class="fas fa-check"></i>
                 <span>English</span>
+            </button>
+            <button class="language-option ${currentLang === 'es-ES' ? 'active' : ''}" data-lang="es-ES">
+                <i class="fas fa-check"></i>
+                <span>Español</span>
             </button>
         </div>
     `;
@@ -67,7 +71,7 @@ function bindLanguageSwitcherEvents() {
             // 更新按钮文本
             const currentLangSpan = languageBtn.querySelector('.current-lang');
             if (currentLangSpan) {
-                currentLangSpan.textContent = lang === 'zh-CN' ? '中文' : 'EN';
+                currentLangSpan.textContent = lang === 'zh-CN' ? '中文' : lang === 'es-ES' ? 'ES' : 'EN';
             }
             
             // 更新选中状态
@@ -78,7 +82,12 @@ function bindLanguageSwitcherEvents() {
             languageDropdown.classList.remove('show');
             
             // 显示提示
-            showToast(t('common.success'), lang === 'zh-CN' ? '已切换到简体中文' : 'Switched to English', 'success');
+            const toastMessages = {
+                'zh-CN': '已切换到简体中文',
+                'en-US': 'Switched to English',
+                'es-ES': 'Cambiado a Español'
+            };
+            showToast(t('common.success'), toastMessages[lang] || 'Language changed', 'success');
         });
     });
     

@@ -52,6 +52,18 @@ export const MODEL_PROTOCOL_PREFIX = {
     GROK: 'grok',
 };
 
+// Tool Runtime Configuration
+export const TOOL_RUNTIME = {
+    // Default timeout for bash commands (30 seconds)
+    DEFAULT_BASH_TIMEOUT_MS: 30000,
+    // Default timeout for web fetch (30 seconds)
+    DEFAULT_WEBFETCH_TIMEOUT_MS: 30000,
+    // Maximum iterations for agent loop
+    DEFAULT_MAX_ITERATIONS: 10,
+    // Maximum output size for bash commands (10MB)
+    DEFAULT_MAX_BUFFER: 10485760
+};
+
 // 提供商标识符常量
 export const MODEL_PROVIDER = {
     GEMINI_CLI: 'gemini-cli-oauth',

@@ -12,6 +12,11 @@ import { PROMPT_LOG_FILENAME } from '../core/config-manager.js';
 import { getPluginManager } from '../core/plugin-manager.js';
 import { randomUUID } from 'crypto';
 import { handleGrokAssetsProxy } from '../utils/grok-assets-proxy.js';
+import { registerAllTools, getToolSummary } from '../tools/register-tools.js';
+
+// Register all tools at module load time (once at startup)
+const registeredToolCount = registerAllTools();
+logger.info(`[Tools] Registered ${registeredToolCount} local tools: ${getToolSummary().map(t => t.name).join(', ')}`);
 
 /**
  * Generate a short unique request ID (8 characters)

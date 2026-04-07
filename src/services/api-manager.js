@@ -5,7 +5,99 @@ import {
     ENDPOINT_TYPE
 } from '../utils/common.js';
 import { getProviderPoolManager } from './service-manager.js';
+import { getApiService } from './service-manager.js';
 import logger from '../utils/logger.js';
+import { runAgentLoop } from '../tools/AgentLoop.js';
+
+/**
+ * Handle tool-enabled requests via AgentLoop
+ * @param {http.IncomingMessage} req - The HTTP request object
+ * @param {http.ServerResponse} res - The HTTP response object
+ * @param {Object} currentConfig - The current configuration object
+ * @param {string} promptLogFilename - The prompt log filename
+ * @param {Object} providerPoolManager - The provider pool manager instance
+ * @param {string} endpointType - The endpoint type (for API routing)
+ * @param {string} path - The request path
+ * @returns {Promise<boolean>} - True if request was handled
+ */
+async function handleToolRuntimeRequest(req, res, currentConfig, promptLogFilename, providerPoolManager, endpointType, path) {
+    // Parse request body
+    const body = await readRequestBody(req);
+    let requestBody;
+    try {
+        requestBody = JSON.parse(body);
+    } catch (error) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: { message: 'Invalid JSON in request body' } }));
+        return true;
+    }
+
+    // Check if tools are present
+    if (!requestBody.tools || !Array.isArray(requestBody.tools) || requestBody.tools.length === 0) {
+        // No tools, fall back to normal handling
+        return false;
+    }
+
+    logger.info(`[ToolRuntime] Processing request with ${requestBody.tools.length} tool(s)`);
+
+    try {
+        // Get API service for the current config
+        const apiService = await getApiService(currentConfig);
+        
+        // Determine if streaming
+        const isStreaming = requestBody.stream !== false;
+        
+        // Prepare request for AgentLoop
+        const agentRequest = {
+            model: requestBody.model,
+            messages: requestBody.messages || [],
+            tools: requestBody.tools,
+            tool_choice: requestBody.tool_choice,
+            temperature: requestBody.temperature,
+            max_tokens: requestBody.max_tokens,
+            stream: isStreaming
+        };
+
+        // For streaming, use the async generator
+        if (isStreaming) {
+            res.writeHead(200, {
+                'Content-Type': 'text/event-stream',
+                'Cache-Control': 'no-cache',
+                'Connection': 'keep-alive',
+                'X-Accel-Buffering': 'no'
+            });
+
+            try {
+                const stream = runAgentLoop(apiService.generateContentStream.bind(apiService), agentRequest, currentConfig);
+                
+                for await (const chunk of stream) {
+                    const sseData = `data: ${JSON.stringify(chunk)}\n\n`;
+                    res.write(sseData);
+                }
+                
+                res.write('data: [DONE]\n\n');
+            } catch (error) {
+                logger.error(`[ToolRuntime] Stream error: ${error.message}`);
+                res.write(`data: ${JSON.stringify({ error: { message: error.message } })}\n\n`);
+            }
+            
+            res.end();
+            return true;
+        } else {
+            // Non-streaming: execute once and return final result
+            const result = await runAgentLoop(apiService.generateContent.bind(apiService), agentRequest, currentConfig);
+            
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify(result));
+            return true;
+        }
+    } catch (error) {
+        logger.error(`[ToolRuntime] Error: ${error.message}`);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: { message: error.message } }));
+        return true;
+    }
+}
 /**
  * Handle API authentication and routing
  * @param {string} method - The HTTP method
@@ -35,6 +127,17 @@ export async function handleAPIRequests(method, path, req, res, currentConfig, a
 
     // Route content generation requests
     if (method === 'POST') {
+        // Check if tool runtime is enabled and request has tools
+        if (currentConfig.TOOL_RUNTIME_ENABLED === true) {
+            // Try tool runtime first for chat/completions and messages endpoints
+            if (path === '/v1/chat/completions' || path === '/v1/messages') {
+                const toolHandled = await handleToolRuntimeRequest(req, res, currentConfig, promptLogFilename, providerPoolManager, 
+                    path === '/v1/messages' ? ENDPOINT_TYPE.CLAUDE_MESSAGE : ENDPOINT_TYPE.OPENAI_CHAT, path);
+                if (toolHandled) return true;
+                // Fall through to normal handling if no tools present
+            }
+        }
+        
         if (path === '/v1/chat/completions') {
             await handleContentGenerationRequest(req, res, apiService, ENDPOINT_TYPE.OPENAI_CHAT, currentConfig, promptLogFilename, providerPoolManager, currentConfig.uuid, path);
             return true;

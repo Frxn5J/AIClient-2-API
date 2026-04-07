@@ -9,7 +9,38 @@ import { parseProxyUrl } from '../utils/proxy-utils.js';
 import { getRequestBody } from '../utils/common.js';
 
 const execAsync = promisify(exec);
-const GITHUB_REPO = 'justlovemaki/AIClient-2-API';
+const DEFAULT_GITHUB_REPO = 'justlovemaki/AIClient-2-API';
+const ORIGIN_REMOTE = 'origin';
+
+function parseGitHubRepoFromRemote(remoteUrl) {
+    if (!remoteUrl) return null;
+
+    const normalizedUrl = remoteUrl.trim();
+    const sshMatch = normalizedUrl.match(/github\.com[:/]([^/]+\/[^/.]+?)(?:\.git)?$/i);
+    const httpsMatch = normalizedUrl.match(/https?:\/\/github\.com\/([^/]+\/[^/.]+?)(?:\.git)?$/i);
+    const match = sshMatch || httpsMatch;
+
+    return match ? match[1] : null;
+}
+
+async function resolveUpdateRepo() {
+    try {
+        const { stdout } = await execAsync(`git remote get-url ${ORIGIN_REMOTE}`);
+        const remoteUrl = stdout.trim();
+        const repo = parseGitHubRepoFromRemote(remoteUrl);
+
+        if (repo) {
+            logger.info(`[Update] Using ${ORIGIN_REMOTE} remote for update source: ${repo}`);
+            return repo;
+        }
+
+        logger.warn(`[Update] Could not parse GitHub repository from ${ORIGIN_REMOTE} remote URL: ${remoteUrl}`);
+    } catch (error) {
+        logger.warn(`[Update] Failed to resolve ${ORIGIN_REMOTE} remote URL, falling back to default repo: ${error.message}`);
+    }
+
+    return DEFAULT_GITHUB_REPO;
+}
 
 function buildGitHubApiCandidates(repo) {
     const apiPath = `repos/${repo}/tags`;
@@ -154,8 +185,8 @@ function compareVersions(v1, v2) {
  * @param {number} limit - 限制返回的版本数量
  * @returns {Promise<string[]>} 版本列表
  */
-async function getVersionsFromGitHub(limit = 10) {
-    const candidates = buildGitHubApiCandidates(GITHUB_REPO);
+async function getVersionsFromGitHub(repo, limit = 10) {
+    const candidates = buildGitHubApiCandidates(repo);
     
     for (const candidate of candidates) {
         try {
@@ -205,8 +236,22 @@ async function getVersionsFromGitHub(limit = 10) {
  * @returns {Promise<string|null>} 最新版本号或 null
  */
 async function getLatestVersionFromGitHub() {
-    const versions = await getVersionsFromGitHub(1);
+    const repo = await resolveUpdateRepo();
+    const versions = await getVersionsFromGitHub(repo, 1);
     return versions.length > 0 ? versions[0] : null;
+}
+
+async function getVersionsFromRemote(limit = 10) {
+    const { stdout } = await execAsync(`git ls-remote --tags --refs ${ORIGIN_REMOTE}`);
+    const versions = stdout
+        .split('\n')
+        .map(line => line.trim().split('\t')[1])
+        .filter(Boolean)
+        .map(ref => ref.replace('refs/tags/', ''))
+        .filter(name => /^v?\d+\.\d+/.test(name));
+
+    versions.sort((a, b) => compareVersions(b, a));
+    return versions.slice(0, limit);
 }
 
 /**
@@ -218,6 +263,7 @@ async function getLatestVersionFromGitHub() {
  */
 export async function checkForUpdates() {
     const versionFilePath = path.join(process.cwd(), 'VERSION');
+    const updateRepo = await resolveUpdateRepo();
     
     // 读取本地版本
     let localVersion = 'unknown';
@@ -249,12 +295,12 @@ export async function checkForUpdates() {
         
         // 获取远程 tags
         try {
-            logger.info('[Update] Fetching remote tags...');
-            await execAsync('git fetch --tags');
+            logger.info(`[Update] Fetching remote tags from ${ORIGIN_REMOTE}...`);
+            await execAsync(`git fetch ${ORIGIN_REMOTE} --tags`);
         } catch (error) {
             logger.warn('[Update] Failed to fetch tags via git, falling back to GitHub API:', error.message);
             // 如果 git fetch 失败，回退到 GitHub API
-            availableVersions = await getVersionsFromGitHub(10);
+            availableVersions = await getVersionsFromGitHub(updateRepo, 10);
             latestTag = availableVersions.length > 0 ? availableVersions[0] : null;
             updateMethod = 'github_api';
         }
@@ -262,16 +308,14 @@ export async function checkForUpdates() {
         // 如果 git fetch 成功，获取最新的 tag 和可用的 tags
         if (!latestTag && updateMethod === 'git') {
             try {
-                // 获取最近的 10 个 tag
-                const { stdout } = await execAsync('git tag --sort=-v:refname');
-                const tags = stdout.trim().split('\n').filter(t => t);
+                const tags = await getVersionsFromRemote(10);
                 if (tags.length > 0) {
-                    availableVersions = tags.slice(0, 10);
+                    availableVersions = tags;
                     latestTag = availableVersions[0];
                 }
             } catch (error) {
                 logger.warn('[Update] Failed to get tags via git, falling back to GitHub API:', error.message);
-                availableVersions = await getVersionsFromGitHub(10);
+                availableVersions = await getVersionsFromGitHub(updateRepo, 10);
                 latestTag = availableVersions.length > 0 ? availableVersions[0] : null;
                 updateMethod = 'github_api';
             }
@@ -279,7 +323,7 @@ export async function checkForUpdates() {
     } else {
         // 非 Git 仓库模式（如 Docker 容器）：使用 GitHub API
         updateMethod = 'github_api';
-        availableVersions = await getVersionsFromGitHub(10);
+        availableVersions = await getVersionsFromGitHub(updateRepo, 10);
         latestTag = availableVersions.length > 0 ? availableVersions[0] : null;
     }
     
@@ -305,6 +349,7 @@ export async function checkForUpdates() {
         localVersion,
         latestVersion: latestTag,
         availableVersions,
+        updateRepo,
         updateMethod,
         error: null
     };
@@ -426,7 +471,8 @@ export async function performUpdate(targetTag = null) {
  * @returns {Promise<Object>} 更新结果
  */
 async function performTarballUpdate(localVersion, latestTag) {
-    const tarballCandidates = buildTarballCandidates(GITHUB_REPO, latestTag);
+    const updateRepo = await resolveUpdateRepo();
+    const tarballCandidates = buildTarballCandidates(updateRepo, latestTag);
     const appDir = process.cwd();
     const tempDir = path.join(appDir, '.update_temp');
     const tarballPath = path.join(tempDir, 'update.tar.gz');

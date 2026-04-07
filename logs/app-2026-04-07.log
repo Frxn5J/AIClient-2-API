@@ -1,0 +1,499 @@
+[2026-04-07 16:17:18.900] [INFO] [Initialization] Discovering and initializing plugins...
+[2026-04-07 16:17:18.925] [INFO] [PluginManager] Registered plugin: ai-monitor v1.0.0
+[2026-04-07 16:17:18.939] [INFO] [PluginManager] Registered plugin: api-potluck v1.0.2
+[2026-04-07 16:17:18.944] [INFO] [PluginManager] Registered plugin: default-auth v1.0.0
+[2026-04-07 16:17:18.946] [INFO] [PluginManager] Found plugin for default config: ai-monitor
+[2026-04-07 16:17:18.947] [INFO] [PluginManager] Found plugin for default config: api-potluck
+[2026-04-07 16:17:18.948] [INFO] [PluginManager] Found plugin for default config: default-auth
+[2026-04-07 16:18:03.988] [INFO] [Initialization] Discovering and initializing plugins...
+[2026-04-07 16:18:03.993] [INFO] [PluginManager] Registered plugin: ai-monitor v1.0.0
+[2026-04-07 16:18:04.002] [INFO] [PluginManager] Registered plugin: api-potluck v1.0.2
+[2026-04-07 16:18:04.004] [INFO] [PluginManager] Registered plugin: default-auth v1.0.0
+[2026-04-07 16:18:04.005] [INFO] [PluginManager] Found plugin for default config: ai-monitor
+[2026-04-07 16:18:04.006] [INFO] [PluginManager] Found plugin for default config: api-potluck
+[2026-04-07 16:18:04.006] [INFO] [PluginManager] Found plugin for default config: default-auth
+[2026-04-07 16:18:04.011] [INFO] [PluginManager] Plugin "ai-monitor" is disabled, skipping init
+[2026-04-07 16:18:04.013] [INFO] [PluginManager] Plugin "api-potluck" is disabled, skipping init
+[2026-04-07 16:18:04.014] [INFO] [Plugins] Loaded 3 plugin(s):
+[2026-04-07 16:18:04.014] [INFO]   ✗ ai-monitor v1.0.0 - AI 接口监控插件 - 捕获请求和响应参数（全链路协议转换监控，流式聚合输出，用于调试和分析）
+[2026-04-07 16:18:04.014] [INFO]   ✗ api-potluck v1.0.2 - API 大锅饭 - Key 管理和用量统计插件<br>管理端：<a href="potluck.html" target="_blank">potluck.html</a><br>用户端：<a href="potluck-user.html" target="_blank">potluck-user.html</a>
+[2026-04-07 16:18:04.015] [INFO]   ✓ default-auth v1.0.0 - 默认 API Key 认证插件
+[2026-04-07 16:18:04.016] [INFO] [ProviderPoolManager] Initialized provider statuses: ok (maxErrorCount: 10)
+[2026-04-07 16:18:04.016] [INFO] [Initialization] ProviderPoolManager initialized.
+[2026-04-07 16:18:04.016] [INFO] [Initialization] Provider pools are currently empty.
+[2026-04-07 16:18:04.016] [INFO] [Initialization] No provider pools configured. Skipping node initialization.
+[2026-04-07 16:18:04.028] [INFO] --- Unified API Server Configuration ---
+[2026-04-07 16:18:04.029] [INFO]   Primary Model Provider: gemini-cli-oauth
+[2026-04-07 16:18:04.030] [INFO]   System Prompt File: configs/input_system_prompt.txt
+[2026-04-07 16:18:04.030] [INFO]   System Prompt Mode: append
+[2026-04-07 16:18:04.030] [INFO]   Host: 0.0.0.0
+[2026-04-07 16:18:04.030] [INFO]   Port: 3000
+[2026-04-07 16:18:04.031] [INFO]   Required API Key: 1234****
+[2026-04-07 16:18:04.031] [INFO]   Prompt Logging: none
+[2026-04-07 16:18:04.031] [INFO] ------------------------------------------
+[2026-04-07 16:18:04.031] [INFO] 
+Unified API Server running on http://0.0.0.0:3000
+[2026-04-07 16:18:04.031] [INFO] Supports multiple API formats:
+[2026-04-07 16:18:04.031] [INFO]   • OpenAI-compatible: /v1/chat/completions, /v1/responses, /v1/models
+[2026-04-07 16:18:04.032] [INFO]   • Gemini-compatible: /v1beta/models, /v1beta/models/{model}:generateContent
+[2026-04-07 16:18:04.032] [INFO]   • Claude-compatible: /v1/messages
+[2026-04-07 16:18:04.032] [INFO]   • Health check: /health
+[2026-04-07 16:18:04.032] [INFO]   • UI Management Console: http://0.0.0.0:3000/
+[2026-04-07 16:18:04.033] [INFO] [Initialization] Performing initial health checks for provider pools...
+[2026-04-07 16:18:07.152] [INFO] [UI] Opened login page in default browser
+[2026-04-07 16:19:16.570] [INFO] [Initialization] Discovering and initializing plugins...
+[2026-04-07 16:19:16.573] [INFO] [PluginManager] Registered plugin: ai-monitor v1.0.0
+[2026-04-07 16:19:16.581] [INFO] [PluginManager] Registered plugin: api-potluck v1.0.2
+[2026-04-07 16:19:16.583] [INFO] [PluginManager] Registered plugin: default-auth v1.0.0
+[2026-04-07 16:19:16.585] [INFO] [PluginManager] Found plugin for default config: ai-monitor
+[2026-04-07 16:19:16.585] [INFO] [PluginManager] Found plugin for default config: api-potluck
+[2026-04-07 16:19:16.586] [INFO] [PluginManager] Found plugin for default config: default-auth
+[2026-04-07 16:19:16.589] [INFO] [PluginManager] Plugin "ai-monitor" is disabled, skipping init
+[2026-04-07 16:19:16.590] [INFO] [PluginManager] Plugin "api-potluck" is disabled, skipping init
+[2026-04-07 16:19:16.590] [INFO] [Plugins] Loaded 3 plugin(s):
+[2026-04-07 16:19:16.591] [INFO]   ✗ ai-monitor v1.0.0 - AI 接口监控插件 - 捕获请求和响应参数（全链路协议转换监控，流式聚合输出，用于调试和分析）
+[2026-04-07 16:19:16.591] [INFO]   ✗ api-potluck v1.0.2 - API 大锅饭 - Key 管理和用量统计插件<br>管理端：<a href="potluck.html" target="_blank">potluck.html</a><br>用户端：<a href="potluck-user.html" target="_blank">potluck-user.html</a>
+[2026-04-07 16:19:16.591] [INFO]   ✓ default-auth v1.0.0 - 默认 API Key 认证插件
+[2026-04-07 16:19:16.592] [INFO] [ProviderPoolManager] Initialized provider statuses: ok (maxErrorCount: 10)
+[2026-04-07 16:19:16.593] [INFO] [Initialization] ProviderPoolManager initialized.
+[2026-04-07 16:19:16.593] [INFO] [Initialization] Provider pools are currently empty.
+[2026-04-07 16:19:16.593] [INFO] [Initialization] No provider pools configured. Skipping node initialization.
+[2026-04-07 16:19:16.604] [INFO] --- Unified API Server Configuration ---
+[2026-04-07 16:19:16.604] [INFO]   Primary Model Provider: gemini-cli-oauth
+[2026-04-07 16:19:16.605] [INFO]   System Prompt File: configs/input_system_prompt.txt
+[2026-04-07 16:19:16.605] [INFO]   System Prompt Mode: append
+[2026-04-07 16:19:16.605] [INFO]   Host: 0.0.0.0
+[2026-04-07 16:19:16.605] [INFO]   Port: 3000
+[2026-04-07 16:19:16.605] [INFO]   Required API Key: 1234****
+[2026-04-07 16:19:16.605] [INFO]   Prompt Logging: none
+[2026-04-07 16:19:16.606] [INFO] ------------------------------------------
+[2026-04-07 16:19:16.606] [INFO] 
+Unified API Server running on http://0.0.0.0:3000
+[2026-04-07 16:19:16.606] [INFO] Supports multiple API formats:
+[2026-04-07 16:19:16.606] [INFO]   • OpenAI-compatible: /v1/chat/completions, /v1/responses, /v1/models
+[2026-04-07 16:19:16.606] [INFO]   • Gemini-compatible: /v1beta/models, /v1beta/models/{model}:generateContent
+[2026-04-07 16:19:16.606] [INFO]   • Claude-compatible: /v1/messages
+[2026-04-07 16:19:16.606] [INFO]   • Health check: /health
+[2026-04-07 16:19:16.607] [INFO]   • UI Management Console: http://0.0.0.0:3000/
+[2026-04-07 16:19:16.607] [INFO] [Initialization] Performing initial health checks for provider pools...
+[2026-04-07 16:19:19.676] [INFO] [UI] Opened login page in default browser
+[2026-04-07 16:20:02.105] [Req:127.0.0.1:9e36cdb0] [INFO] [Auth] Successfully read password file
+[2026-04-07 16:20:02.105] [Req:127.0.0.1:9e36cdb0] [INFO] [Auth] Login successful from IP: 127.0.0.1
+[2026-04-07 16:20:04.378] [Req:127.0.0.1:b58c5441] [INFO] [Usage API] Fetching fresh usage data
+[2026-04-07 16:20:04.454] [Req:127.0.0.1:b58c5441] [INFO] [Usage Cache] Usage data cached to C:\Users\Francisco\Documents\w2api\AIClient-2-API\configs\usage-cache.json
+[2026-04-07 16:20:05.544] [Req:127.0.0.1:5260d84f] [INFO] [Usage API] Returning cached usage data
+[2026-04-07 16:20:06.150] [Req:127.0.0.1:1a6dec37] [INFO] [Update] Fetching remote tags...
+[2026-04-07 16:30:42.109] [INFO] [Initialization] Discovering and initializing plugins...
+[2026-04-07 16:30:42.114] [INFO] [PluginManager] Registered plugin: ai-monitor v1.0.0
+[2026-04-07 16:30:42.125] [INFO] [PluginManager] Registered plugin: api-potluck v1.0.2
+[2026-04-07 16:30:42.127] [INFO] [PluginManager] Registered plugin: default-auth v1.0.0
+[2026-04-07 16:30:42.129] [INFO] [PluginManager] Found plugin for default config: ai-monitor
+[2026-04-07 16:30:42.130] [INFO] [PluginManager] Found plugin for default config: api-potluck
+[2026-04-07 16:30:42.134] [INFO] [PluginManager] Found plugin for default config: default-auth
+[2026-04-07 16:30:42.138] [INFO] [PluginManager] Plugin "ai-monitor" is disabled, skipping init
+[2026-04-07 16:37:20.204] [INFO] [Initialization] Discovering and initializing plugins...
+[2026-04-07 16:37:20.210] [INFO] [PluginManager] Registered plugin: ai-monitor v1.0.0
+[2026-04-07 16:37:20.216] [INFO] [PluginManager] Registered plugin: api-potluck v1.0.2
+[2026-04-07 16:37:20.219] [INFO] [PluginManager] Registered plugin: default-auth v1.0.0
+[2026-04-07 16:37:20.220] [INFO] [PluginManager] Found plugin for default config: ai-monitor
+[2026-04-07 16:37:20.221] [INFO] [PluginManager] Found plugin for default config: api-potluck
+[2026-04-07 16:37:20.224] [INFO] [PluginManager] Found plugin for default config: default-auth
+[2026-04-07 16:37:20.229] [INFO] [PluginManager] Plugin "ai-monitor" is disabled, skipping init
+[2026-04-07 16:37:20.230] [INFO] [PluginManager] Plugin "api-potluck" is disabled, skipping init
+[2026-04-07 16:37:20.231] [INFO] [Plugins] Loaded 3 plugin(s):
+[2026-04-07 16:37:20.232] [INFO]   ✗ ai-monitor v1.0.0 - AI 接口监控插件 - 捕获请求和响应参数（全链路协议转换监控，流式聚合输出，用于调试和分析）
+[2026-04-07 16:37:20.233] [INFO]   ✗ api-potluck v1.0.2 - API 大锅饭 - Key 管理和用量统计插件<br>管理端：<a href="potluck.html" target="_blank">potluck.html</a><br>用户端：<a href="potluck-user.html" target="_blank">potluck-user.html</a>
+[2026-04-07 16:37:20.234] [INFO]   ✓ default-auth v1.0.0 - 默认 API Key 认证插件
+[2026-04-07 16:37:20.235] [INFO] [ProviderPoolManager] Initialized provider statuses: ok (maxErrorCount: 10)
+[2026-04-07 16:37:20.236] [INFO] [Initialization] ProviderPoolManager initialized.
+[2026-04-07 16:37:20.236] [INFO] [Initialization] Provider pools are currently empty.
+[2026-04-07 16:37:20.237] [INFO] [Initialization] No provider pools configured. Skipping node initialization.
+[2026-04-07 16:37:20.253] [INFO] --- Unified API Server Configuration ---
+[2026-04-07 16:37:20.254] [INFO]   Primary Model Provider: gemini-cli-oauth
+[2026-04-07 16:37:20.254] [INFO]   System Prompt File: configs/input_system_prompt.txt
+[2026-04-07 16:37:20.255] [INFO]   System Prompt Mode: append
+[2026-04-07 16:37:20.256] [INFO]   Host: 0.0.0.0
+[2026-04-07 16:37:20.257] [INFO]   Port: 3000
+[2026-04-07 16:37:20.257] [INFO]   Required API Key: 1234****
+[2026-04-07 16:37:20.258] [INFO]   Prompt Logging: none
+[2026-04-07 16:37:20.259] [INFO] ------------------------------------------
+[2026-04-07 16:37:20.260] [INFO] 
+Unified API Server running on http://0.0.0.0:3000
+[2026-04-07 16:37:20.260] [INFO] Supports multiple API formats:
+[2026-04-07 16:37:20.261] [INFO]   • OpenAI-compatible: /v1/chat/completions, /v1/responses, /v1/models
+[2026-04-07 16:37:20.272] [INFO]   • Gemini-compatible: /v1beta/models, /v1beta/models/{model}:generateContent
+[2026-04-07 16:37:20.276] [INFO]   • Claude-compatible: /v1/messages
+[2026-04-07 16:37:20.276] [INFO]   • Health check: /health
+[2026-04-07 16:37:20.277] [INFO]   • UI Management Console: http://0.0.0.0:3000/
+[2026-04-07 16:37:20.279] [INFO] [Initialization] Performing initial health checks for provider pools...
+[2026-04-07 16:37:23.348] [INFO] [UI] Opened login page in default browser
+[2026-04-07 16:37:33.052] [Req:127.0.0.1:f72a8672] [INFO] [Usage API] Returning cached usage data
+[2026-04-07 16:37:34.035] [Req:127.0.0.1:62ccb4d2] [INFO] [Usage API] Returning cached usage data
+[2026-04-07 16:37:34.734] [Req:127.0.0.1:e00ff0cd] [INFO] [Update] Fetching remote tags...
+[2026-04-07 16:37:59.485] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Generating OAuth URL...
+[2026-04-07 16:37:59.500] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Generating auth URL...
+[2026-04-07 16:37:59.517] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Callback server listening on port 1455
+[2026-04-07 16:37:59.533] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] OAuth URL generated successfully
+[2026-04-07 16:38:02.554] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (1/100)
+[2026-04-07 16:38:05.562] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (2/100)
+[2026-04-07 16:38:08.566] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (3/100)
+[2026-04-07 16:38:11.567] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (4/100)
+[2026-04-07 16:38:14.578] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (5/100)
+[2026-04-07 16:38:17.585] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (6/100)
+[2026-04-07 16:38:20.600] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (7/100)
+[2026-04-07 16:38:23.617] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (8/100)
+[2026-04-07 16:38:26.626] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (9/100)
+[2026-04-07 16:38:29.634] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (10/100)
+[2026-04-07 16:38:32.638] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Waiting for callback... (11/100)
+[2026-04-07 16:38:34.059] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Received auth callback, completing OAuth flow...
+[2026-04-07 16:38:34.062] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Exchanging authorization code for tokens...
+[2026-04-07 16:38:34.850] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Credentials saved to configs\codex\1775601514847_codex-christianpose2025@gmail.com.json
+[2026-04-07 16:38:34.858] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Authentication successful!
+[2026-04-07 16:38:34.861] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Email: christianpose2025@gmail.com
+[2026-04-07 16:38:34.863] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] Account ID: 3049bd7d-67fd-447c-b08e-c695c0d9559d
+[2026-04-07 16:38:34.869] [Req:127.0.0.1:40194fc2] [INFO] [Auto-Link] Successfully linked credential: configs\codex\1775601514847_codex-christianpose2025@gmail.com.json to OpenAI Codex OAuth
+[2026-04-07 16:38:34.879] [Req:127.0.0.1:40194fc2] [INFO] [Auto-Link] Added 1 new config(s) to provider pools:
+[2026-04-07 16:38:34.882] [Req:127.0.0.1:40194fc2] [INFO]   OpenAI Codex OAuth: 1 config(s)
+[2026-04-07 16:38:34.894] [Req:127.0.0.1:40194fc2] [INFO]     - .\configs\codex\1775601514847_codex-christianpose2025@gmail.com.json
+[2026-04-07 16:38:34.901] [Req:127.0.0.1:40194fc2] [INFO] [ProviderPoolManager] Initialized provider statuses: ok (maxErrorCount: 10)
+[2026-04-07 16:38:34.906] [Req:127.0.0.1:40194fc2] [INFO] [Codex Auth] OAuth flow completed successfully
+[2026-04-07 16:38:35.940] [Req:127.0.0.1:40194fc2] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:38:58.293] [Req:127.0.0.1:3f19a61f] [INFO] [UI API] System prompt updated
+[2026-04-07 16:38:58.319] [Req:127.0.0.1:3f19a61f] [INFO] [UI API] Configuration saved to configs/config.json
+[2026-04-07 16:38:58.473] [Req:127.0.0.1:4056d7c2] [INFO] [Config] Loaded configuration from configs/config.json
+[2026-04-07 16:38:58.611] [Req:127.0.0.1:4056d7c2] [INFO] [Config] Loaded provider pools from configs/provider_pools.json
+[2026-04-07 16:38:58.673] [Req:127.0.0.1:4056d7c2] [INFO] [ProviderPoolManager] Initialized provider statuses: ok (maxErrorCount: 10)
+[2026-04-07 16:38:58.704] [Req:127.0.0.1:4056d7c2] [INFO] [UI API] Configuration reloaded:
+[2026-04-07 16:38:58.763] [Req:127.0.0.1:4056d7c2] [INFO] [ProviderPoolManager] Initialized provider statuses: ok (maxErrorCount: 10)
+[2026-04-07 16:38:58.793] [Req:127.0.0.1:4056d7c2] [INFO] [Initialization] ProviderPoolManager existing instance updated.
+[2026-04-07 16:38:58.844] [Req:127.0.0.1:4056d7c2] [INFO] [Initialization] Initializing 1 node(s) for provider 'openai-codex-oauth'...
+[2026-04-07 16:38:58.904] [Req:127.0.0.1:4056d7c2] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:38:58.961] [Req:127.0.0.1:4056d7c2] [INFO]   ✓ Initialized node: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:38:59.066] [Req:127.0.0.1:4056d7c2] [INFO] [Initialization] Provider pool initialization complete: 1 succeeded, 0 failed.
+[2026-04-07 16:38:59.124] [Req:127.0.0.1:4056d7c2] [INFO] [UI API] Configuration reloaded successfully
+[2026-04-07 16:38:59.817] [Req:127.0.0.1:4056d7c2] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:41:06.877] [Req:127.0.0.1:6525eff7] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 16:41:06.880] [Req:127.0.0.1:6525eff7] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 16:41:06.887] [Req:127.0.0.1:6525eff7] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 16:41:06.897] [Req:127.0.0.1:6525eff7] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 1)
+[2026-04-07 16:41:06.901] [Req:127.0.0.1:6525eff7] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:41:06.902] [Req:127.0.0.1:6525eff7] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 16:41:06.904] [Req:127.0.0.1:6525eff7] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 16:41:06.920] [Req:127.0.0.1:6525eff7] [INFO] [System Prompt Manager] System prompt updated in file for provider 'openai'.
+[2026-04-07 16:41:06.932] [Req:127.0.0.1:6525eff7] [WARN] codexApiService not initialized, attempting to re-initialize...
+[2026-04-07 16:41:06.936] [Req:127.0.0.1:6525eff7] [INFO] [Codex] Initializing Codex API Service...
+[2026-04-07 16:41:06.944] [Req:127.0.0.1:6525eff7] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775601666944, 20 minutes from now: 1775602866944, Is near expiry: false
+[2026-04-07 16:41:06.947] [Req:127.0.0.1:6525eff7] [INFO] [Codex] Initialized with account: christianpose2025@gmail.com
+[2026-04-07 16:41:06.948] [Req:127.0.0.1:6525eff7] [INFO] [Codex] Initialization complete. Account: christianpose2025@gmail.com
+[2026-04-07 16:41:06.952] [Req:127.0.0.1:6525eff7] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775601666952, 20 minutes from now: 1775602866952, Is near expiry: false
+[2026-04-07 16:41:07.866] [Req:127.0.0.1:5e833498] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 16:41:07.867] [Req:127.0.0.1:5e833498] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 16:41:07.872] [Req:127.0.0.1:5e833498] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 16:41:07.876] [Req:127.0.0.1:5e833498] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 2)
+[2026-04-07 16:41:07.880] [Req:127.0.0.1:5e833498] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:41:07.881] [Req:127.0.0.1:5e833498] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 16:41:07.882] [Req:127.0.0.1:5e833498] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 16:41:07.888] [Req:127.0.0.1:5e833498] [INFO] [System Prompt Manager] System prompt updated in file for provider 'openai'.
+[2026-04-07 16:41:07.890] [Req:127.0.0.1:5e833498] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775601667890, 20 minutes from now: 1775602867890, Is near expiry: false
+[2026-04-07 16:41:08.895] [Req:127.0.0.1:5e833498] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:41:09.485] [Req:127.0.0.1:6525eff7] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 16:41:09.529] [Req:127.0.0.1:6525eff7] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 16:41:10.621] [Req:127.0.0.1:6525eff7] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:41:23.957] [Req:127.0.0.1:5e833498] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 16:41:24.037] [Req:127.0.0.1:5e833498] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 16:41:25.329] [Req:127.0.0.1:5e833498] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:42:39.679] [Req:127.0.0.1:0fc4b30b] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 16:42:39.729] [Req:127.0.0.1:0fc4b30b] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 16:42:39.869] [Req:127.0.0.1:0fc4b30b] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 16:42:39.921] [Req:127.0.0.1:0fc4b30b] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 3)
+[2026-04-07 16:42:40.042] [Req:127.0.0.1:0fc4b30b] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:42:40.163] [Req:127.0.0.1:0fc4b30b] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 16:42:40.215] [Req:127.0.0.1:0fc4b30b] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 16:42:40.395] [Req:127.0.0.1:0fc4b30b] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775601760395, 20 minutes from now: 1775602960395, Is near expiry: false
+[2026-04-07 16:42:41.107] [Req:127.0.0.1:0fc4b30b] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:42:46.459] [Req:127.0.0.1:0fc4b30b] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 16:42:46.607] [Req:127.0.0.1:0fc4b30b] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 16:42:47.921] [Req:127.0.0.1:0fc4b30b] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:43:02.547] [Req:127.0.0.1:35e59ea3] [INFO] [Usage API] Fetching fresh usage data
+[2026-04-07 16:43:03.215] [Req:127.0.0.1:35e59ea3] [INFO] [Codex] Successfully fetched usage limits for plan: plus
+[2026-04-07 16:43:03.307] [Req:127.0.0.1:35e59ea3] [INFO] [Usage Cache] Usage data cached to C:\Users\Francisco\Documents\w2api\AIClient-2-API\configs\usage-cache.json
+[2026-04-07 16:43:29.826] [Req:127.0.0.1:8fe20229] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 16:43:29.839] [Req:127.0.0.1:8fe20229] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 16:43:29.867] [Req:127.0.0.1:8fe20229] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 16:43:29.875] [Req:127.0.0.1:8fe20229] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 4)
+[2026-04-07 16:43:29.890] [Req:127.0.0.1:8fe20229] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:43:29.899] [Req:127.0.0.1:8fe20229] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 16:43:29.918] [Req:127.0.0.1:8fe20229] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 16:43:29.965] [Req:127.0.0.1:8fe20229] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775601809965, 20 minutes from now: 1775603009965, Is near expiry: false
+[2026-04-07 16:43:30.952] [Req:127.0.0.1:8fe20229] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:43:36.236] [Req:127.0.0.1:8fe20229] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 16:43:36.266] [Req:127.0.0.1:8fe20229] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 16:43:37.395] [Req:127.0.0.1:8fe20229] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:44:12.308] [Req:127.0.0.1:b1f85a42] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 16:44:12.347] [Req:127.0.0.1:b1f85a42] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 16:44:12.359] [Req:127.0.0.1:b1f85a42] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 16:44:12.391] [Req:127.0.0.1:b1f85a42] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 5)
+[2026-04-07 16:44:12.449] [Req:127.0.0.1:b1f85a42] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:44:12.499] [Req:127.0.0.1:b1f85a42] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 16:44:12.546] [Req:127.0.0.1:b1f85a42] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 16:44:12.665] [Req:127.0.0.1:b1f85a42] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775601852664, 20 minutes from now: 1775603052664, Is near expiry: false
+[2026-04-07 16:44:13.596] [Req:127.0.0.1:b1f85a42] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:44:20.717] [Req:127.0.0.1:b1f85a42] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 16:44:20.793] [Req:127.0.0.1:b1f85a42] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 16:44:21.957] [Req:127.0.0.1:b1f85a42] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:44:45.979] [Req:127.0.0.1:b1699670] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 16:44:46.044] [Req:127.0.0.1:b1699670] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 16:44:46.136] [Req:127.0.0.1:b1699670] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 16:44:46.153] [Req:127.0.0.1:b1699670] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 6)
+[2026-04-07 16:44:46.194] [Req:127.0.0.1:b1699670] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:44:46.203] [Req:127.0.0.1:b1699670] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 16:44:46.217] [Req:127.0.0.1:b1699670] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 16:44:46.279] [Req:127.0.0.1:b1699670] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775601886279, 20 minutes from now: 1775603086279, Is near expiry: false
+[2026-04-07 16:44:47.313] [Req:127.0.0.1:b1699670] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:44:59.520] [Req:127.0.0.1:b1699670] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 16:44:59.574] [Req:127.0.0.1:b1699670] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 16:45:00.799] [Req:127.0.0.1:b1699670] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 16:59:55.794] [Req:127.0.0.1:94fff557] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 16:59:55.821] [Req:127.0.0.1:94fff557] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 16:59:55.896] [Req:127.0.0.1:94fff557] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 16:59:55.971] [Req:127.0.0.1:94fff557] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 7)
+[2026-04-07 16:59:56.016] [Req:127.0.0.1:94fff557] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 16:59:56.035] [Req:127.0.0.1:94fff557] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 16:59:56.136] [Req:127.0.0.1:94fff557] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 16:59:56.351] [Req:127.0.0.1:94fff557] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775602796351, 20 minutes from now: 1775603996351, Is near expiry: false
+[2026-04-07 16:59:57.764] [Req:127.0.0.1:94fff557] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:00:05.718] [Req:127.0.0.1:94fff557] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:00:05.794] [Req:127.0.0.1:94fff557] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:00:06.976] [Req:127.0.0.1:94fff557] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:00:39.396] [Req:127.0.0.1:b106191d] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:00:39.410] [Req:127.0.0.1:b106191d] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:00:39.458] [Req:127.0.0.1:b106191d] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:00:39.514] [Req:127.0.0.1:b106191d] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 8)
+[2026-04-07 17:00:39.555] [Req:127.0.0.1:b106191d] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:00:39.627] [Req:127.0.0.1:b106191d] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:00:39.692] [Req:127.0.0.1:b106191d] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:00:39.756] [Req:127.0.0.1:b106191d] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775602839738, 20 minutes from now: 1775604039738, Is near expiry: false
+[2026-04-07 17:00:40.712] [Req:127.0.0.1:b106191d] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:00:44.827] [Req:127.0.0.1:b106191d] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:00:44.848] [Req:127.0.0.1:b106191d] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:00:45.942] [Req:127.0.0.1:b106191d] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:01:17.996] [Req:127.0.0.1:5bb0a95f] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:01:18.017] [Req:127.0.0.1:5bb0a95f] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:01:18.069] [Req:127.0.0.1:5bb0a95f] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:01:18.154] [Req:127.0.0.1:5bb0a95f] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 9)
+[2026-04-07 17:01:18.217] [Req:127.0.0.1:5bb0a95f] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:01:18.279] [Req:127.0.0.1:5bb0a95f] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:01:18.314] [Req:127.0.0.1:5bb0a95f] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:01:18.426] [Req:127.0.0.1:5bb0a95f] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775602878426, 20 minutes from now: 1775604078426, Is near expiry: false
+[2026-04-07 17:01:19.425] [Req:127.0.0.1:5bb0a95f] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:01:22.669] [Req:127.0.0.1:5bb0a95f] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:01:22.750] [Req:127.0.0.1:5bb0a95f] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:01:23.939] [Req:127.0.0.1:5bb0a95f] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:01:53.658] [Req:127.0.0.1:d6a7416b] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:01:53.687] [Req:127.0.0.1:d6a7416b] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:01:53.754] [Req:127.0.0.1:d6a7416b] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:01:53.775] [Req:127.0.0.1:d6a7416b] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 10)
+[2026-04-07 17:01:53.804] [Req:127.0.0.1:d6a7416b] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:01:53.853] [Req:127.0.0.1:d6a7416b] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:01:53.868] [Req:127.0.0.1:d6a7416b] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:01:53.907] [Req:127.0.0.1:d6a7416b] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775602913907, 20 minutes from now: 1775604113907, Is near expiry: false
+[2026-04-07 17:01:54.855] [Req:127.0.0.1:d6a7416b] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:02:00.003] [Req:127.0.0.1:d6a7416b] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:02:00.005] [Req:127.0.0.1:d6a7416b] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:02:01.092] [Req:127.0.0.1:d6a7416b] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:02:24.822] [Req:127.0.0.1:720b5813] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:02:24.887] [Req:127.0.0.1:720b5813] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:02:24.945] [Req:127.0.0.1:720b5813] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:02:25.011] [Req:127.0.0.1:720b5813] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 11)
+[2026-04-07 17:02:25.035] [Req:127.0.0.1:720b5813] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:02:25.047] [Req:127.0.0.1:720b5813] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:02:25.092] [Req:127.0.0.1:720b5813] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:02:25.165] [Req:127.0.0.1:720b5813] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775602945164, 20 minutes from now: 1775604145164, Is near expiry: false
+[2026-04-07 17:02:26.307] [Req:127.0.0.1:720b5813] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:02:58.808] [Req:127.0.0.1:720b5813] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:02:58.832] [Req:127.0.0.1:720b5813] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:03:00.019] [Req:127.0.0.1:720b5813] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:06:15.088] [Req:127.0.0.1:84aae4c5] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:06:15.090] [Req:127.0.0.1:84aae4c5] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:06:15.104] [Req:127.0.0.1:84aae4c5] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:06:15.106] [Req:127.0.0.1:84aae4c5] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 12)
+[2026-04-07 17:06:15.108] [Req:127.0.0.1:84aae4c5] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:06:15.108] [Req:127.0.0.1:84aae4c5] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:06:15.109] [Req:127.0.0.1:84aae4c5] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:06:15.112] [Req:127.0.0.1:84aae4c5] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603175112, 20 minutes from now: 1775604375112, Is near expiry: false
+[2026-04-07 17:06:16.111] [Req:127.0.0.1:84aae4c5] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:06:28.389] [Req:127.0.0.1:84aae4c5] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:06:28.427] [Req:127.0.0.1:84aae4c5] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:06:29.618] [Req:127.0.0.1:84aae4c5] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:06:54.119] [Req:127.0.0.1:59df0710] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:06:54.142] [Req:127.0.0.1:59df0710] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:06:54.157] [Req:127.0.0.1:59df0710] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:06:54.160] [Req:127.0.0.1:59df0710] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 13)
+[2026-04-07 17:06:54.174] [Req:127.0.0.1:59df0710] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:06:54.184] [Req:127.0.0.1:59df0710] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:06:54.192] [Req:127.0.0.1:59df0710] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:06:54.218] [Req:127.0.0.1:59df0710] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603214218, 20 minutes from now: 1775604414218, Is near expiry: false
+[2026-04-07 17:06:55.210] [Req:127.0.0.1:59df0710] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:07:11.612] [Req:127.0.0.1:59df0710] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:07:11.613] [Req:127.0.0.1:59df0710] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:07:12.636] [Req:127.0.0.1:59df0710] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:07:16.764] [Req:127.0.0.1:b9111950] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:07:16.766] [Req:127.0.0.1:b9111950] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:07:16.778] [Req:127.0.0.1:b9111950] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:07:16.780] [Req:127.0.0.1:b9111950] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 14)
+[2026-04-07 17:07:16.781] [Req:127.0.0.1:b9111950] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:07:16.782] [Req:127.0.0.1:b9111950] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:07:16.784] [Req:127.0.0.1:b9111950] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:07:16.790] [Req:127.0.0.1:b9111950] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603236790, 20 minutes from now: 1775604436790, Is near expiry: false
+[2026-04-07 17:07:17.788] [Req:127.0.0.1:b9111950] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:07:43.412] [Req:127.0.0.1:b9111950] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:07:43.413] [Req:127.0.0.1:b9111950] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:07:44.424] [Req:127.0.0.1:b9111950] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:09:03.646] [Req:127.0.0.1:f5d8069c] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:09:03.647] [Req:127.0.0.1:f5d8069c] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:09:03.655] [Req:127.0.0.1:f5d8069c] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:09:03.656] [Req:127.0.0.1:f5d8069c] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 15)
+[2026-04-07 17:09:03.657] [Req:127.0.0.1:f5d8069c] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:09:03.658] [Req:127.0.0.1:f5d8069c] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:09:03.661] [Req:127.0.0.1:f5d8069c] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:09:03.665] [Req:127.0.0.1:f5d8069c] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603343665, 20 minutes from now: 1775604543665, Is near expiry: false
+[2026-04-07 17:09:04.667] [Req:127.0.0.1:f5d8069c] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:09:17.178] [Req:127.0.0.1:f5d8069c] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:09:17.179] [Req:127.0.0.1:f5d8069c] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:09:18.199] [Req:127.0.0.1:f5d8069c] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:09:21.061] [Req:127.0.0.1:e69f00c3] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:09:21.065] [Req:127.0.0.1:e69f00c3] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:09:21.082] [Req:127.0.0.1:e69f00c3] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:09:21.085] [Req:127.0.0.1:e69f00c3] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 16)
+[2026-04-07 17:09:21.088] [Req:127.0.0.1:e69f00c3] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:09:21.089] [Req:127.0.0.1:e69f00c3] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:09:21.092] [Req:127.0.0.1:e69f00c3] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:09:21.106] [Req:127.0.0.1:e69f00c3] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603361106, 20 minutes from now: 1775604561106, Is near expiry: false
+[2026-04-07 17:09:22.105] [Req:127.0.0.1:e69f00c3] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:09:49.203] [Req:127.0.0.1:e69f00c3] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:09:49.204] [Req:127.0.0.1:e69f00c3] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:09:50.213] [Req:127.0.0.1:e69f00c3] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:11:27.088] [Req:127.0.0.1:1b86c447] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:11:27.089] [Req:127.0.0.1:1b86c447] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:11:27.099] [Req:127.0.0.1:1b86c447] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:11:27.100] [Req:127.0.0.1:1b86c447] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 17)
+[2026-04-07 17:11:27.101] [Req:127.0.0.1:1b86c447] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:11:27.102] [Req:127.0.0.1:1b86c447] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:11:27.103] [Req:127.0.0.1:1b86c447] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:11:27.106] [Req:127.0.0.1:1b86c447] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603487106, 20 minutes from now: 1775604687106, Is near expiry: false
+[2026-04-07 17:11:28.119] [Req:127.0.0.1:1b86c447] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:11:42.202] [Req:127.0.0.1:1b86c447] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:11:42.203] [Req:127.0.0.1:1b86c447] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:11:43.219] [Req:127.0.0.1:1b86c447] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:11:45.731] [Req:127.0.0.1:e3c5d54a] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:11:45.732] [Req:127.0.0.1:e3c5d54a] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:11:45.738] [Req:127.0.0.1:e3c5d54a] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:11:45.739] [Req:127.0.0.1:e3c5d54a] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 18)
+[2026-04-07 17:11:45.742] [Req:127.0.0.1:e3c5d54a] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:11:45.743] [Req:127.0.0.1:e3c5d54a] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:11:45.743] [Req:127.0.0.1:e3c5d54a] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:11:45.746] [Req:127.0.0.1:e3c5d54a] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603505746, 20 minutes from now: 1775604705746, Is near expiry: false
+[2026-04-07 17:11:46.751] [Req:127.0.0.1:e3c5d54a] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:11:51.243] [Req:127.0.0.1:e3c5d54a] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:11:51.257] [Req:127.0.0.1:e3c5d54a] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:11:52.326] [Req:127.0.0.1:e3c5d54a] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:11:55.291] [Req:127.0.0.1:0df5cdd2] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:11:55.293] [Req:127.0.0.1:0df5cdd2] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:11:55.303] [Req:127.0.0.1:0df5cdd2] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:11:55.305] [Req:127.0.0.1:0df5cdd2] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 19)
+[2026-04-07 17:11:55.306] [Req:127.0.0.1:0df5cdd2] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:11:55.306] [Req:127.0.0.1:0df5cdd2] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:11:55.307] [Req:127.0.0.1:0df5cdd2] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:11:55.312] [Req:127.0.0.1:0df5cdd2] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603515312, 20 minutes from now: 1775604715312, Is near expiry: false
+[2026-04-07 17:11:56.329] [Req:127.0.0.1:0df5cdd2] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:12:19.830] [Req:127.0.0.1:0df5cdd2] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:12:19.832] [Req:127.0.0.1:0df5cdd2] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:12:20.917] [Req:127.0.0.1:0df5cdd2] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:12:29.975] [Req:127.0.0.1:6d383fb0] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:12:29.977] [Req:127.0.0.1:6d383fb0] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:12:30.003] [Req:127.0.0.1:6d383fb0] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:12:30.010] [Req:127.0.0.1:6d383fb0] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 20)
+[2026-04-07 17:12:30.012] [Req:127.0.0.1:6d383fb0] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:12:30.013] [Req:127.0.0.1:6d383fb0] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:12:30.013] [Req:127.0.0.1:6d383fb0] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:12:30.022] [Req:127.0.0.1:6d383fb0] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603550022, 20 minutes from now: 1775604750022, Is near expiry: false
+[2026-04-07 17:12:31.018] [Req:127.0.0.1:6d383fb0] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:12:37.814] [Req:127.0.0.1:6d383fb0] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:12:37.822] [Req:127.0.0.1:6d383fb0] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:12:38.834] [Req:127.0.0.1:6d383fb0] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:12:41.422] [Req:127.0.0.1:02682e33] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:12:41.426] [Req:127.0.0.1:02682e33] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:12:41.442] [Req:127.0.0.1:02682e33] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:12:41.444] [Req:127.0.0.1:02682e33] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 21)
+[2026-04-07 17:12:41.445] [Req:127.0.0.1:02682e33] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:12:41.447] [Req:127.0.0.1:02682e33] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:12:41.450] [Req:127.0.0.1:02682e33] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:12:41.465] [Req:127.0.0.1:02682e33] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603561465, 20 minutes from now: 1775604761465, Is near expiry: false
+[2026-04-07 17:12:42.574] [Req:127.0.0.1:02682e33] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:12:56.149] [Req:127.0.0.1:02682e33] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:12:56.150] [Req:127.0.0.1:02682e33] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:12:57.166] [Req:127.0.0.1:02682e33] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:03.319] [Req:127.0.0.1:a399100a] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:13:03.322] [Req:127.0.0.1:a399100a] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:13:03.335] [Req:127.0.0.1:a399100a] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:13:03.337] [Req:127.0.0.1:a399100a] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 22)
+[2026-04-07 17:13:03.339] [Req:127.0.0.1:a399100a] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:13:03.340] [Req:127.0.0.1:a399100a] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:13:03.341] [Req:127.0.0.1:a399100a] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:13:03.353] [Req:127.0.0.1:a399100a] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603583353, 20 minutes from now: 1775604783353, Is near expiry: false
+[2026-04-07 17:13:04.363] [Req:127.0.0.1:a399100a] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:10.781] [Req:127.0.0.1:a399100a] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:13:10.782] [Req:127.0.0.1:a399100a] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:13:11.801] [Req:127.0.0.1:a399100a] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:19.620] [Req:127.0.0.1:7e954e80] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:13:19.622] [Req:127.0.0.1:7e954e80] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:13:19.645] [Req:127.0.0.1:7e954e80] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:13:19.647] [Req:127.0.0.1:7e954e80] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 23)
+[2026-04-07 17:13:19.649] [Req:127.0.0.1:7e954e80] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:13:19.650] [Req:127.0.0.1:7e954e80] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:13:19.650] [Req:127.0.0.1:7e954e80] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:13:19.658] [Req:127.0.0.1:7e954e80] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603599658, 20 minutes from now: 1775604799658, Is near expiry: false
+[2026-04-07 17:13:20.651] [Req:127.0.0.1:7e954e80] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:23.224] [Req:127.0.0.1:7e954e80] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:13:23.225] [Req:127.0.0.1:7e954e80] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:13:24.260] [Req:127.0.0.1:7e954e80] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:32.522] [Req:127.0.0.1:2e946e7c] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:13:32.523] [Req:127.0.0.1:2e946e7c] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:13:32.538] [Req:127.0.0.1:2e946e7c] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:13:32.539] [Req:127.0.0.1:2e946e7c] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 24)
+[2026-04-07 17:13:32.542] [Req:127.0.0.1:2e946e7c] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:13:32.544] [Req:127.0.0.1:2e946e7c] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:13:32.545] [Req:127.0.0.1:2e946e7c] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:13:32.549] [Req:127.0.0.1:2e946e7c] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603612549, 20 minutes from now: 1775604812549, Is near expiry: false
+[2026-04-07 17:13:33.554] [Req:127.0.0.1:2e946e7c] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:37.833] [Req:127.0.0.1:2e946e7c] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:13:37.846] [Req:127.0.0.1:2e946e7c] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:13:38.906] [Req:127.0.0.1:2e946e7c] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:41.146] [Req:127.0.0.1:466ecc32] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:13:41.171] [Req:127.0.0.1:466ecc32] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:13:41.203] [Req:127.0.0.1:466ecc32] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:13:41.210] [Req:127.0.0.1:466ecc32] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 25)
+[2026-04-07 17:13:41.214] [Req:127.0.0.1:466ecc32] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:13:41.224] [Req:127.0.0.1:466ecc32] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:13:41.230] [Req:127.0.0.1:466ecc32] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:13:41.245] [Req:127.0.0.1:466ecc32] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603621245, 20 minutes from now: 1775604821245, Is near expiry: false
+[2026-04-07 17:13:42.225] [Req:127.0.0.1:466ecc32] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:54.514] [Req:127.0.0.1:466ecc32] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:13:54.515] [Req:127.0.0.1:466ecc32] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:13:55.530] [Req:127.0.0.1:466ecc32] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:13:59.315] [Req:127.0.0.1:a4f01bcc] [INFO] [Server] Received request: POST http://localhost:3000/openai-codex-oauth/v1/chat/completions
+[2026-04-07 17:13:59.321] [Req:127.0.0.1:a4f01bcc] [INFO] [Config] MODEL_PROVIDER overridden by path segment to: openai-codex-oauth
+[2026-04-07 17:13:59.330] [Req:127.0.0.1:a4f01bcc] [INFO] [Content Generation] Model: gpt-5.4, Stream: true
+[2026-04-07 17:13:59.335] [Req:127.0.0.1:a4f01bcc] [INFO] [ProviderPoolManager] [Concurrency Control] Atomic selection: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd (Seq: 26)
+[2026-04-07 17:13:59.337] [Req:127.0.0.1:a4f01bcc] [INFO] [Adapter] getServiceAdapter, provider: openai-codex-oauth, uuid: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd
+[2026-04-07 17:13:59.338] [Req:127.0.0.1:a4f01bcc] [INFO] [Content Generation] Selected service adapter based on model: gpt-5.4
+[2026-04-07 17:13:59.339] [Req:127.0.0.1:a4f01bcc] [INFO] [Request Convert] Converting request from openai to openai-codex-oauth
+[2026-04-07 17:13:59.341] [Req:127.0.0.1:a4f01bcc] [INFO] [Codex] Checking expiry date | Expiry date: 1776465513845, Current time: 1775603639341, 20 minutes from now: 1775604839341, Is near expiry: false
+[2026-04-07 17:14:00.355] [Req:127.0.0.1:a4f01bcc] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:14:09.370] [Req:127.0.0.1:a4f01bcc] [INFO] [Provider Pool] Increasing usage count for openai-codex-oauth (7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd) after successful stream request
+[2026-04-07 17:14:09.372] [Req:127.0.0.1:a4f01bcc] [INFO] [ProviderPoolManager] Marked provider as healthy: 7b2add4a-c2f1-479e-94a1-3c1fc23d1cfd for type openai-codex-oauth
+[2026-04-07 17:14:10.386] [Req:127.0.0.1:a4f01bcc] [INFO] [ProviderPoolManager] configs/provider_pools.json updated successfully for types: openai-codex-oauth
+[2026-04-07 17:19:20.680] [Req:127.0.0.1:52b5489c] [INFO] [Usage API] Fetching fresh usage data
+[2026-04-07 17:19:21.278] [Req:127.0.0.1:52b5489c] [INFO] [Codex] Successfully fetched usage limits for plan: plus
+[2026-04-07 17:19:21.285] [Req:127.0.0.1:52b5489c] [INFO] [Usage Cache] Usage data cached to C:\Users\Francisco\Documents\w2api\AIClient-2-API\configs\usage-cache.json
+[2026-04-07 17:20:19.936] [INFO] [Server] Received SIGINT

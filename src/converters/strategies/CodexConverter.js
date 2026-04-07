@@ -152,6 +152,17 @@ export class CodexConverter extends BaseConverter {
                 return item;
             });
         }
+
+        // 处理工具定义
+        if (responsesRequest.tools && responsesRequest.tools.length > 0) {
+            this.buildToolNameMap(responsesRequest.tools);
+            codexRequest.tools = this.convertTools(responsesRequest.tools);
+        }
+
+        // 处理工具选择
+        if (responsesRequest.tool_choice) {
+            codexRequest.tool_choice = this.convertToolChoice(responsesRequest.tool_choice);
+        }
     
         return codexRequest;
     }

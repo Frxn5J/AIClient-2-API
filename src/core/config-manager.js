@@ -96,7 +96,14 @@ export async function initializeConfig(args = process.argv.slice(2), configFileP
         TLS_SIDECAR_ENABLED_PROVIDERS: [], // 启用 TLS Sidecar 的提供商列表
         TLS_SIDECAR_PORT: 9090,     // sidecar 监听端口
         TLS_SIDECAR_BINARY_PATH: null, // 自定义二进制路径（默认自动搜索）
-        TLS_SIDECAR_PROXY_URL: null    // TLS Sidecar 专用的上游代理地址
+        TLS_SIDECAR_PROXY_URL: null,   // TLS Sidecar 专用的上游代理地址
+        // Local Tool Runtime Configuration
+        TOOL_RUNTIME_ENABLED: false,   // Enable/disable local tool execution
+        TOOL_PERMISSIONS: [],          // Allowlist of tool names that can be executed
+        TOOL_WORKING_DIR: process.cwd(), // Working directory for tool execution
+        TOOL_BASH_TIMEOUT_MS: 30000,    // Timeout for bash execution in milliseconds
+        TOOL_WEBFETCH_TIMEOUT_MS: 30000, // Timeout for web fetch in milliseconds
+        TOOL_MAX_ITERATIONS: 10        // Maximum iterations in agent loop
     };
 
     let currentConfig = { ...defaultConfig };
@@ -209,6 +216,23 @@ export async function initializeConfig(args = process.argv.slice(2), configFileP
         PROMPT_LOG_FILENAME = `${currentConfig.PROMPT_LOG_BASE_NAME}-${timestamp}.log`;
     } else {
         PROMPT_LOG_FILENAME = ''; // Clear if not logging to file
+    }
+
+    // Validate and normalize tool runtime configuration
+    if (currentConfig.TOOL_RUNTIME_ENABLED !== true) {
+        currentConfig.TOOL_RUNTIME_ENABLED = false;
+    }
+    if (!Array.isArray(currentConfig.TOOL_PERMISSIONS)) {
+        logger.warn('[Config Warning] TOOL_PERMISSIONS must be an array, defaulting to empty array');
+        currentConfig.TOOL_PERMISSIONS = [];
+    }
+    if (typeof currentConfig.TOOL_BASH_TIMEOUT_MS !== 'number' || currentConfig.TOOL_BASH_TIMEOUT_MS <= 0) {
+        logger.warn('[Config Warning] TOOL_BASH_TIMEOUT_MS must be a positive number, defaulting to 30000');
+        currentConfig.TOOL_BASH_TIMEOUT_MS = 30000;
+    }
+    if (!currentConfig.TOOL_WORKING_DIR || typeof currentConfig.TOOL_WORKING_DIR !== 'string') {
+        logger.warn('[Config Warning] TOOL_WORKING_DIR must be a non-empty string, defaulting to process.cwd()');
+        currentConfig.TOOL_WORKING_DIR = process.cwd();
     }
 
     // Assign to the exported CONFIG
